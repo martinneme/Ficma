@@ -1,0 +1,668 @@
+//**** Constantes de operaciones ***//
+
+$btnBackColor:#2ea59f;
+
+$backGroundColor:#062a4d;
+$MsjPage:otro;
+
+$backGroundColorBlack:#121212;
+$textColorBlack:#b3b3b3 
+
+$backColorMsj:#143eb7,
+#1e5bb5,
+#2f91ad,
+#35b0a3;
+
+$font-family:"Poppins",
+"arimo",
+"Courier",
+"Monospace";
+
+//****FIN CONSTANTES****//
+
+
+
+
+.text-style {
+    @if $MsjPage==pageError {
+        color: red !important;
+    }
+
+    @else {
+        color: white !important;
+    }
+
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@for $i from 1 through 1 {
+    @each $color in $backColorMsj {
+
+        .txtmsj#{$i} {
+            background-color: $color + !important;
+            $i: $i+1;
+        }
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Poppins:wght@100;400&display=swap");
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+    font-family: $font-family;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #btnBackColor;
+    color: white;
+    border-radius: 4px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.tableServ {
+    position: relative;
+    left: 25%;
+    top: 50%;
+}
+
+.articulos {
+    opacity: 1;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    animation-name: art;
+    animation-duration: 2s;
+}
+
+.main_articulos_width {
+    width: 100%;
+}
+
+@keyframes art {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.btn-primary span {
+    font-size: 1em;
+    border-color: black;
+
+}
+
+
+.main-border-style {
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+}
+
+h1 {
+    background-color: #backGroundColor !important;
+    color: white !important;
+}
+
+main {
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .main_articulos-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+main .submain {
+    padding: 5%;
+    justify-content: center;
+}
+
+main .submain .subMenu {
+    display: flex;
+    width: 100%;
+    height: 282px;
+    object-fit: cover;
+    justify-content: space-evenly;
+}
+
+main .submain .imagenes {
+    height: 282px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+main .submain .imagenes:hover {
+    transform: scale(1.2, 1.2);
+    width: 100%;
+    transition: 0.5s;
+}
+
+main .submain .descImg {
+    display: block;
+    margin-top: 3%;
+    width: auto;
+    height: 5%;
+
+}
+
+main .subjobs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+    height: 60vh;
+}
+
+main .subjobs .job {
+    width: 95%;
+    height: 282px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+main .subjobs .job:hover {
+    transform: scale(1.2, 1.2);
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px #719ECE;
+}
+
+.contact {
+    display: block;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    padding-bottom: 5%;
+
+}
+
+
+.contact .blockForm {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.contact form {
+    background: none;
+    color: white;
+    height: auto;
+
+}
+
+
+.contact form .form-stylos {
+    padding: 5px;
+    margin: 20px;
+    border-radius: 4px;
+    width: 40%;
+    height: 2em;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-width: 5px;
+}
+
+.contact form .form-stylos:focus {
+    padding: 5px;
+    margin: 20px;
+    border-radius: 4px;
+    width: 90%;
+    height: 2em;
+    border-style: solid;
+    outline: none !important;
+    border-color: #btnBackColor;
+    border-width: 5px;
+    box-shadow: 0 0 5px #719ECE;
+}
+
+
+textarea {
+
+    height: 250px;
+    width: 50%;
+}
+
+textarea:focus {
+
+    outline: none !important;
+    border-color: #btnBackColor;
+    border-width: 5px;
+    box-shadow: 0 0 5px #719ECE;
+    width: 90%;
+}
+
+.contact .blockForm form textarea {
+    justify-self: center;
+}
+
+.contact .blockForm form {
+    align-content: center;
+}
+
+.contact .blockForm .form {
+    justify-self: center;
+    text-align: center;
+}
+
+.sendMsj {
+    height: auto;
+
+}
+
+
+
+.txtmsj1 {
+    background-color: #143eb7 !important;
+}
+
+.txtmsj2 {
+    background-color: #1e5bb5 !important;
+}
+
+.txtmsj3 {
+    background-color: #2f91ad !important;
+}
+
+.txtmsj4 {
+    background-color: #35b0a3 !important;
+}
+
+.sendMsj p {
+    background-color: #backGroundColor;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    align-items: center;
+    padding: 3%
+}
+
+.text-style {
+    color: white !important;
+
+}
+
+
+.text-style-fail {
+    color: red !important;
+
+}
+
+
+
+button {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 0px 10px -1px;
+}
+
+button a {
+    color: black;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #btnBackColor;
+    transform: translate(0, 10px);
+
+}
+
+button a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+.articulos ul li {
+    text-align: justify;
+    list-style-position: inside;
+}
+
+.articulos ol li {
+    list-style-position: inside;
+    text-align: center;
+}
+
+.blockServ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blockServ .lineaServ {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-content: center;
+}
+
+.blockServ .lineaServ .artTitulo {
+    background: chartreuse;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    margin: 3%;
+    width: 45%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, white 0px 2px 0px -1px;
+}
+
+.blockServ .lineaServ .artIcon {
+    background: chartreuse;
+    border-radius: 4px;
+    background-color: white;
+    justify-self: center;
+    padding: 2%;
+    margin: 3%;
+    width: 5%;
+}
+
+.blockServ .lineaServ .artIcon img {
+    width: 100%;
+}
+
+.blockServ .lineaServ .artBoton {
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+}
+
+.blockServ .lineaServ .artBoton button {
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+
+
+}
+
+.blockServ .lineaServ p {
+    margin-top: 5%;
+}
+
+footer {
+    height: 35%;
+    background-color: #backGroundColor;
+    color: white;
+}
+
+footer .footer_div-Style {
+    height: 30vh;
+    background-color: #backGroundColor;
+    background: linear-gradient(#00aaa6, #00238d);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 0px 10px -1px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+footer .footer_div-Style .footer_p_aling {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        display: grid;
+        justify-content: center;
+    }
+
+    header .menu {
+        justify-self: center;
+    }
+
+    header .menu nav ul li {
+        display: block;
+    }
+
+    .body-fontStyle {
+        color: black;
+        font-size: 16px;
+    }
+
+    main .submain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .submain .descImg {
+        display: block;
+        margin-top: 3%;
+        width: auto;
+        height: 5%;
+        padding-left: 0%;
+    }
+
+    .artbutton {
+        opacity: 1;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .body-flexBoxColum {
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .blockSomos {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        height: fit-content;
+
+    }
+
+    .blockSomos .blockArt {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .blockForm {
+        display: block;
+        flex-direction: row;
+
+    }
+
+    .subjobs {
+        height: auto !important;
+    }
+
+    .blockServ .artTitulo,
+    .blockServ .artBoton {
+        align-self: center;
+        width: 90%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .blockServ .artIcon {
+        display: none;
+        align-self: center;
+    }
+
+
+    footer {
+        width: 100%;
+        height: auto;
+        color: white;
+    }
+
+    footer .socialMedia {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        background-color: white;
+        display: grid;
+        grid-template-areas: "logo menu";
+    }
+
+    header .logo {
+        grid-area: "logo";
+        grid-column: 1/2;
+        background-color: white;
+    }
+
+    header .menu {
+        Grid-area: "menu";
+        Grid-column: 2/3;
+        Display: grid;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .jobs {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .blockForm {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+    }
+
+    .blockForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blockForm .form {
+        text-align: center;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .subjobs {
+        height: auto !important;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        color: white;
+    }
+
+    footer .footer_div-Style {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        background-color: white;
+        display: grid;
+        grid-template-areas: "logo menu";
+    }
+
+    .artbutton {
+        opacity: 1;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .jobs {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .blockSomos {
+        display: flex;
+    }
+
+    .blockForm {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+    }
+
+    .blockForm form {
+        align-content: center;
+    }
+
+    .blockForm .form {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact {
+        height: 50vh;
+    }
+
+
+
+    footer {
+        width: 100%;
+        color: white;
+    }
+
+    footer .footer_div-Style {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+}
