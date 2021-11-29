@@ -15,15 +15,22 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.navbar{
+  text-align: center;
+  padding-top: 10%;
+}
 
+.navbar-nav{
+padding-top: 10%;
+}
 nav a {
   color: black;
   text-decoration: none;
 }
 
-nav a:hover {
+.nav-link:hover {
   background-color: #2ea59f;
-  color: white;
+  color: white!important;
   border-radius: 4px;
 }
 
@@ -130,6 +137,14 @@ main .submain .descImg {
   height: 5%;
 
 }
+
+main .submain .carousel-item p{
+  color: black;
+  font-size: 18px;
+  background-color: white;
+}
+
+
 
 main .subjobs {
   display: flex;
@@ -344,11 +359,12 @@ button a:hover {
   justify-self: center;
   padding: 2%;
   margin: 3%;
-  width: 5%;
+  width: 10%;
 }
 
 .blockServ .lineaServ .artIcon img {
   width: 100%;
+  
 }
 
 .blockServ .lineaServ .artBoton {
@@ -371,6 +387,16 @@ button a:hover {
 
 .blockServ .lineaServ p {
   margin-top: 5%;
+}
+
+.artbutton button{
+  opacity: 1;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:50px;
+
 }
 
 footer {
@@ -431,8 +457,19 @@ footer .footer_div-Style .footer_p_aling {
     display: flex;
     flex-direction: row;
     align-items: center;
+  
   }
 
+  .artbutton button{
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:50px;
+    justify-content: center;
+  }
+ 
   .body-flexBoxColum {
     display: flex;
     flex-direction: column;
@@ -537,6 +574,18 @@ footer .footer_div-Style .footer_p_aling {
 
   .subjobs {
     height: auto !important;
+  }
+
+  .artbutton{
+    display: flex;
+  }
+  .artbutton button{
+    opacity: 1;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:50px;
   }
 
   footer {
